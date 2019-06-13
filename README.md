@@ -63,3 +63,24 @@ Constraints:
 ### 2.3. Train, CV and Test Datasets
 Split the dataset randomly into three parts train, cross validation and test with 64%,16%, 20% of data respectively
 
+
+## 3. Summary
+###step-by-step procedure:
+
+Read the data in dataframe.
+
+Merge text and variants data.
+
+Split the train,cv,test data in the ratio 64:16:20.
+
+Analyze each and every feature to check what is the impotance of the feature and how well the data is distributed into train,test,cv. To check that use LogisticRegression as a model.
+
+Finally, take NavieBayes as a baseline model and apply various models to check with model is performing well.
+
+Table all the log loss values for each models to check which model is performed well.
+
+In my case SGDClassifier with logloss performed well, applied feature engineered the sparse matrix of train,test and cv.
+
+It turned out well the loss is reduced lessthan 1.
+
+Then tried with unigrams and bigrams which turned not well
